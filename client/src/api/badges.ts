@@ -1,0 +1,68 @@
+import type { IconName } from "../components/Icon";
+
+export const badges = [
+  {
+    name: "First Rep",
+    detail: "First workout logged",
+    icon: "dumbbell" as IconName,
+    earned: true,
+    date: "JAN 08",
+    color: "yellow",
+  },
+  {
+    name: "On Fire",
+    detail: "6 week streak",
+    icon: "flame" as IconName,
+    earned: true,
+    date: "MAY 12",
+    color: "orange",
+  },
+  {
+    name: "Century Club",
+    detail: "100 kg total volume",
+    icon: "star" as IconName,
+    earned: true,
+    date: "MAR 21",
+    color: "cream",
+  },
+  {
+    name: "Perfect Week",
+    detail: "All sessions complete",
+    icon: "check" as IconName,
+    earned: true,
+    date: "APR 19",
+    color: "yellow",
+  },
+  {
+    name: "Power Up",
+    detail: "5 personal bests",
+    icon: "bolt" as IconName,
+    earned: true,
+    date: "MAY 03",
+    color: "orange",
+  },
+  {
+    name: "Iron Will",
+    detail: "50 workouts complete",
+    icon: "shield" as IconName,
+    earned: false,
+    date: "38 / 50",
+    color: "cream",
+  },
+  {
+    name: "Peak Form",
+    detail: "12 week streak",
+    icon: "target" as IconName,
+    earned: false,
+    date: "6 / 12",
+    color: "yellow",
+  },
+  {
+    name: "Heavy Hitter",
+    detail: "100 kg back squat",
+    icon: "dumbbell" as IconName,
+    earned: false,
+    date: "92.5 / 100",
+    color: "orange",
+  },
+];
