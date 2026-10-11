@@ -1,0 +1,16 @@
+{
+  "name": "fitos-backend",
+  "version": "1.0.0",
+  "description": "Fitness Tracker API",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env server.ts"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
