@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon, { type IconName } from "../components/Icon";
 import { badges } from "../api/badges.ts";
 import { profile as apiProfile } from "../api/profile.ts";
@@ -16,6 +16,27 @@ export default function ProfileView() {
   const visibleBadges = badges.filter(
     (badge) => badgeFilter === "all" || badge.earned,
   );
+
+  function getProfile() {
+    // Fetch profile data from the backend API
+    fetch("/server/00429")
+      .then((response) => response.json())
+      .then((data) => {
+        setMemberProfile(data);
+        console.log("Fetched profile data:", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching profile data:", error);
+      });
+  }
+
+  useEffect(() => {
+    getProfile();
+  }, []); // Fetch profile data when the component mounts
+
+  if (!profile) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className="profile-page">
